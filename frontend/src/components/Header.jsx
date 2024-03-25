@@ -7,7 +7,7 @@ import { FaMoon } from "react-icons/fa";
 function Header() {
   const path = useLocation().pathname;
   return (
-    <Navbar className="border-b-2">
+    <Navbar className="border-b-4">
       <Link
         to="/"
         className="self-center whitespace-nowrap text-sm sm:text-large font-semibold dark:text-white"
@@ -29,12 +29,12 @@ function Header() {
       </Button>
 
       {/* nightmode and signin  */}
-      <div className="flex gap-2  md:order-2">   {/* order-2 here states that on screens above medium size show this second  */}
+      <div className="flex gap-2  md:order-2 ">   {/* order-2 here states that on screens above medium size show this second  */}
         <Button className="w-12 h-10 hidden sm:inline" color='gray' pill>
           <FaMoon />
         </Button>
         <Link to='/sign-in'>
-          <Button gradientDuoTone="purpleToPink" pill>Sign In</Button>
+          <Button gradientDuoTone="purpleToPink" pill outline>Sign In</Button>
         </Link>
         <Navbar.Toggle />
       </div>
