@@ -15,9 +15,9 @@ const signup = asyncHandler(async (req, res) => {
 
     if (existingUser) {
         if (existingUser.username === username) {
-            throw new ApiError(400, "Username already exists, please choose a different one.");
+            return res.status(400).json(new ApiResponse(400, null, "Username already exists"));
         } else {
-            throw new ApiError(400, "Email already exists, please use a different one.");
+            return res.status(400).json(new ApiResponse(400, null, "Email already exists, please use a different one."));
         }
     }
 
