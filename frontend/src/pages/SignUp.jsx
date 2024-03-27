@@ -35,6 +35,7 @@ function SignUp() {
         body:JSON.stringify(formData)
       })
       const data = await res.json()
+      //basically checking if dup user exists or something like that in line39
       if(data.success === false){
         return seterrorMessage(data.message)
       }
